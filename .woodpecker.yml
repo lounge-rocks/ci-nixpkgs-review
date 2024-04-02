@@ -1,6 +1,9 @@
+when:
+  branch: main
+
 labels:
   backend: local
-  platform: linux/arm64
+  platform: linux/amd64
 
 steps:
   - name: setup attic
