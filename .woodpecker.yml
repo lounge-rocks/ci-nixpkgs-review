@@ -12,7 +12,7 @@ steps:
   - name: run nixpkgs-review
     image: bash
     commands:
-      - git clone https://github.com/NixOS/nixpkgs.git
+      - git clone https://github.com/NixOS/nixpkgs.git --depth 1
       - cd nixpkgs
       - nix run nixpkgs#nixpkgs-review -- pr 300920
 
