@@ -12,7 +12,7 @@ steps:
   - name: run nixpkgs-review
     image: bash
     commands:
-      - nix run nixpkgs#nixpkgs-review
+      - nix run nixpkgs#nixpkgs-review -- pr ${PRNUM}
 
   - name: push ondsel
     image: bash
