@@ -1,0 +1,22 @@
+labels:
+  backend: local
+  platform: linux/arm64
+
+steps:
+  - name: setup attic
+    image: bash
+    commands:
+      - attic login lounge-rocks https://cache.lounge.rocks $ATTIC_KEY --set-default
+    secrets: [attic_key]
+
+  - name: run nixpkgs-review
+    image: bash
+    commands:
+      - nixpkgs-review --help
+
+  - name: push ondsel
+    image: bash
+    commands:
+      - attic push nix-cache result
+
+
