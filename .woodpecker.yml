@@ -16,10 +16,7 @@ steps:
       - cd nixpkgs
       - nix run nixpkgs#nixpkgs-review -- pr 300920
 
-
-  - name: push ondsel
-    image: bash
-    commands:
-      - attic push nix-cache result
-
-
+  # - name: push result
+  #   image: bash
+  #   commands:
+  #     - attic push nix-cache result
