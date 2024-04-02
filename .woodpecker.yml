@@ -12,8 +12,7 @@ steps:
   - name: run nixpkgs-review
     image: bash
     commands:
-      - nix-shell -p nixpkgs-review
-      - nixpkgs-review --help
+      - nix run nixpkgs#nixpkgs-review
 
   - name: push ondsel
     image: bash
