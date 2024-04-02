@@ -12,7 +12,10 @@ steps:
   - name: run nixpkgs-review
     image: bash
     commands:
+      - git clone https://github.com/NixOS/nixpkgs.git
+      - cd nixpkgs
       - nix run nixpkgs#nixpkgs-review -- pr 300920
+
 
   - name: push ondsel
     image: bash
